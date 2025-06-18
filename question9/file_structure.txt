@@ -1,0 +1,8 @@
+file1.exe
+file2.exe
+file2.js
+file3.css
+file5.html
+file6.cmd
+file7.cmd
+file8.bat

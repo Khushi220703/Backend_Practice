@@ -1,0 +1,3 @@
+Home => C:\Users\khush
+Memory => 8362713088
+Platform => win32
