@@ -1,4 +1,4 @@
-# 🛠 Node.js File System Scripts (SkillAcademy Challenge)
+# 🛠 Node.js File System Scripts 
 
 This repository contains solutions to 10 real-world Node.js backend scripting challenges focused on the **file system**, using core modules like `fs`, `path`, and `os`.
 
