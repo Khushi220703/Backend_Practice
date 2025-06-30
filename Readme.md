@@ -117,6 +117,51 @@ Create an HTTP server that lists files in a directory as an HTML table.
 Each file should have a download link.
 Use the fs module to read files and path to construct download paths safely.
 
+Ques21. Concurrent File Access Handling
+• Build a system that writes and reads from the same file concurrently using multiple HTTP requests. 
+Implement a mechanism using fs to handle concurrent access (e.g., using file locks) to prevent data 
+corruption when multiple clients attempt to write to the file at the same time.
+
+Ques22. Disk Space Checker Using OS and FS
+• Write a Node.js application that checks the available disk space on the system using the os module. 
+If the available space falls below a certain threshold (e.g., 10%), delete files from a specified directory 
+based on age or size using the fs module, ensuring not to delete important system files.
+
+Ques23. Server Health Dashboard Using OS and HTTP
+• Create a real-time server health dashboard that shows CPU load, memory usage, and disk space usage using the os module. 
+Build an HTTP server to serve this data as a JSON API, updating the metrics every few seconds.
+
+Ques24. File Backup and Restore System
+• Develop a backup and restore system that allows users to backup files via an HTTP request to a server. 
+The server should store the files in a compressed format using fs and path, and users should be able to restore any 
+file by sending a request with the backup file name.
+
+Ques25. User File Storage Quota Management
+• Create a file storage service where each user has a defined storage quota (e.g., 500MB). Use the fs module to 
+track each user's total storage usage, and reject file uploads if their quota is exceeded. Use the path module to ensure each user's 
+files are stored in separate directories.
+
+Ques26. Cross-Platform File Renaming Tool
+• Write a command-line tool that accepts a directory path and renames all files in that directory based on a specific pattern 
+(e.g., appending a timestamp to the filename). The tool should work on both Windows and Unix-based systems, handling paths using 
+the path module for cross-platform compatibility.
+
+Ques27. Directory Watcher with Backup and Notification
+• Create a system that watches a directory for changes using fs.watch. When a file is added, modified, or 
+deleted, back up the file (or delete it from the backup if removed), and notify a user via an HTTP request sent to a specified endpoint.
+
+Ques28. Large File Upload Handling with Streams
+• Build an HTTP server that allows users to upload large files (greater than 1GB). Use the fs.createWriteStream method to handle the file upload in chunks, 
+preventing the server from running out of memory during the upload process.
+
+Ques29. Custom File Search CLI with Path and FS
+• Create a command-line tool that searches for files within a specified directory (and its subdirectories) 
+based on a file extension or part of the filename. Use the fs and path modules to traverse the directory tree and handle file paths across platforms.
+
+Ques30. HTTP Log Parser and Analyzer
+• Write a system that reads an HTTP server log file and parses the requests. 
+The application should extract and display information such as the number of requests, the most frequent endpoints, 
+and the status codes. Use the fs module to read the log file and os to get system information for reporting purposes.
 
 
 ---
