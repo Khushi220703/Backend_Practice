@@ -163,6 +163,12 @@ Ques30. HTTP Log Parser and Analyzer
 The application should extract and display information such as the number of requests, the most frequent endpoints, 
 and the status codes. Use the fs module to read the log file and os to get system information for reporting purposes.
 
+Ques31. Configuration Management System
+• Build a Node.js application that manages system configurations stored in JSON files. 
+The application should be able to read configuration files from a specific directory, validate their structure, 
+and update them via an HTTP API. Ensure that only valid paths and formats are used with the help of the fs and path modules, 
+and restrict access to certain files based on file permissions.
+
 
 ---
 
