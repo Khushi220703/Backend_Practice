@@ -2,28 +2,26 @@
 
 This repository contains solutions to 20 real-world backend scripting challenges using Node.js. These problems involve file system automation, monitoring, server creation, and data synchronization, showcasing how to use core Node.js modules (fs, path, os) and frameworks like Express effectively.
 
-## 📚 Topics Covered
-✅ File and directory operations
+## Topics Covered
+✅ File and Directory Operations (read, write, delete, rename)
 
-🔁 Recursion & directory traversal
+🔁 Recursive Traversal & Folder Size Calculation
 
-🧠 System and OS-level info handling
+🧠 System & OS-Level Insights (os, path, process, etc.)
 
-🛰 File uploads and metadata APIs
+🛰 File Uploads with Validation and Quota Enforcement
 
-📡 File change monitoring (SSE)
+📡 Real-Time File Monitoring (fs.watch, chokidar, SSE)
 
-🧾 Logging, rotation & archiving
+🧾 Logging, Rotation, and Compression (fs, zlib, cron-style tasks)
 
-📂 Static and secure file servers
+📂 Static File Servers with Access Control and Role-Based Permissions
 
-⏳ CPU usage logging
+⏳ CPU, Memory, and Disk Usage Tracking with Threshold Alerts
 
-🌐 File syncing between servers
+🌐 File Synchronization Across Environments
 
-📥 Dynamic file listing & downloads
-
-
+📥 Dynamic File Listings, Downloads, and Backup Automation
 
 ---
 
@@ -169,17 +167,83 @@ The application should be able to read configuration files from a specific direc
 and update them via an HTTP API. Ensure that only valid paths and formats are used with the help of the fs and path modules, 
 and restrict access to certain files based on file permissions.
 
+Ques31. Configuration Management System
+• Build a Node.js application that manages system configurations stored in JSON files. 
+The application should be able to read configuration files from a specific directory, validate their structure, 
+and update them via an HTTP API. Ensure that only valid paths and formats are used with the help of the fs and path modules, 
+and restrict access to certain files based on file permissions.
+
+Ques32. Content Delivery Network (CDN) Simulation
+• Simulate a content delivery system where an HTTP server serves static files (like images, videos, or documents) 
+from multiple directories. Implement a cache mechanism where frequently accessed files are stored temporarily in memory or a 
+temporary directory for faster access. Use fs to handle file reading and path to ensure correct file resolution.
+
+Ques33. File Integrity Checker
+• Write a Node.js application that monitors a specific directory and periodically checks the integrity of files using hashing 
+(e.g., MD5, SHA-356). If any file has been modified, alert the user via HTTP notifications or log the changes in a report file. 
+Use fs to read files and os to gather system information for logging.
+
+Ques34. Custom File-Based Authentication System
+• Implement a file-based authentication system where user credentials (username, password hash) are stored in a JSON file. 
+Create an HTTP server with endpoints for registering users, logging in, and authenticating users. Use fs to securely read and write user 
+credentials and path to handle the correct file paths for different environments.
+
+Ques35. Cross-Platform Application Updater
+• Create a Node.js application updater system that checks for new updates from a remote server and downloads 
+the update files (e.g., .zip or .tar) via HTTP. Extract the files into a specified directory and validate the integrity of the downloaded files before updating. 
+Use the fs module to manage file operations, path for compatibility, and os to detect the operating system.
+
+Ques36. File System Quota Enforcer for Shared Hosting
+• Build a system that enforces file system quotas for different users in a shared hosting environment. 
+Each user has a limited amount of disk space they can use, and the system should monitor their usage. When a user exceeds their quota, 
+prevent further file writes and alert the user. Use the fs and os modules to track storage consumption and perform file operations.
+
+Ques37. Custom File Compression and Decompression API
+• Create an HTTP server that provides an API for compressing and decompressing files. The server should accept file uploads, 
+compress them using a popular algorithm (e.g., gzip), and provide a downloadable link for the compressed file. 
+Implement similar functionality for decompressing uploaded files. Use fs for file handling and path to ensure proper file resolution.
+
+Ques38. File Permissions and Access Control System
+• Build an application that checks file and directory permissions using fs.stat and enforces role-based access controls based 
+on the user’s role (e.g., admin, guest, editor). Create an HTTP API where only authorized users can perform certain file 
+operations (like creating, deleting, or modifying files).
+
+Ques39. File Upload Progress Tracker
+• Develop a file upload service where clients can upload large files (multi-GB) via an HTTP API. 
+Implement a progress tracker that shows the percentage of the file that has been uploaded. Use fs.createWriteStream to write files 
+in chunks and http to handle the upload requests.
+
+Ques40. Operating System Resource Monitor with Alerts
+• Create a server health monitor that tracks CPU usage, memory consumption, and disk space usage using the os module.
+ If any of these metrics exceed a certain threshold (e.g., CPU > 90%, memory > 80%, disk usage > 90%), send an alert via HTTP to a specified endpoint or 
+ log the event in a report file.
+
+
+
+
 
 ---
 
-## 📦 Tools & Modules Used
-- `fs` – File system operations
-- `path` – Cross-platform path handling
-- `os` – User/system memory info
-- `chokidar` – For file watching (Q7)
-- `express` - For HTTP servers.
-- `nodemon` - For running the server.
-- `multer` - For file uploads
+📦 Tools & Modules Used
+   `fs` – Core module for file system operations (read, write, delete, streams)
+
+   `path` – For handling file and directory paths in a cross-platform way
+
+   `os` – To access system-level info (CPU, memory, platform)
+
+   `crypto` – For hashing and data integrity checks
+
+   `zlib` – To compress and decompress files (gzip)
+
+   `chokidar` – Efficient file watcher for real-time monitoring
+
+   `express` – Lightweight framework to build RESTful HTTP APIs
+
+   `nodemon` – Development utility to auto-restart server on file changes
+
+   `multer` – Middleware for handling file uploads via multipart/form-data
+
+   
 
 ## 💡 How to Run
 ```bash
