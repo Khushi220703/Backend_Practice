@@ -218,7 +218,51 @@ Ques40. Operating System Resource Monitor with Alerts
  If any of these metrics exceed a certain threshold (e.g., CPU > 90%, memory > 80%, disk usage > 90%), send an alert via HTTP to a specified endpoint or 
  log the event in a report file.
 
+Ques41. Version-Controlled Backup System
+• Implement a version-controlled backup system that automatically backs up specified directories and files. 
+The system should maintain multiple versions of files (based on changes), so when a file is modified, the previous version is archived. 
+Use the fs module to copy files and the path module to manage file versioning and backup paths.
 
+Ques42. Real-Time File Collaboration System
+• Build a real-time collaboration system where multiple users can edit a shared file simultaneously via an HTTP API. 
+Use the fs module to read and write to the shared file and handle concurrency with file locks to ensure no data corruption. 
+Broadcast changes to all connected users using WebSockets or HTTP streaming.
+
+Ques43. Dynamic Web Content Generator Using Templates
+• Create an HTTP server that dynamically generates web pages based on templates. The server should read HTML templates 
+from a directory using fs, insert dynamic content based on user input or data from other files, and serve the final HTML to the client. 
+Use path to ensure safe handling of the template paths.
+
+Ques44. File Comparison and Synchronization Tool
+• Write a tool that compares two directories and identifies the files that are different (based on size, modification time, or hash). 
+The tool should synchronize the directories by copying the updated or missing files from one directory to the other. Use fs for file operations and 
+path to ensure cross-platform compatibility.
+
+Ques45. Server-Side File Encryption and Decryption API
+• Implement an HTTP API that allows users to upload files for encryption or decryption. The files should be encrypted using a strong algorithm (e.g., AES), 
+stored on the server, and made available for download later. Use the fs module to handle file reads and writes, and path to ensure secure file storage.
+
+Ques46. Temporary File Management System
+• Develop a system where files uploaded to a server are stored in a temporary directory and automatically deleted after a certain amount of time (e.g., 1 hour). 
+Use fs to monitor and delete files at regular intervals, and path to ensure the files are properly stored in the temporary directory.
+
+Ques47. Operating System Information Dashboard
+• Build a dashboard that displays real-time operating system information (CPU, memory, network interfaces) using the os module. 
+Create an HTTP API that serves this data in JSON format, and periodically update the dashboard with the latest system statistics.
+
+Ques48. User-Specific Data Storage System
+• Design a system where each user has a personal directory to store their files. When a user logs in, the system should create or access their 
+personal directory (based on their username), ensuring file paths are safe and properly managed. Use fs to create directories and path to manage file paths.
+
+Ques49. Multi-Threaded File Processor
+• Write a Node.js application that processes large files (e.g., log files) by splitting them into 
+chunks and processing each chunk in parallel using child processes or worker threads. Use the fs module to read and write file chunks and os to determine the number of 
+CPU cores available for parallel processing.
+
+Ques50. Custom Log Management with Archiving and Compression
+• Develop a log management system that writes logs to a file and automatically rotates the log file after it reaches a specified size (e.g., 10MB). 
+Compress old log files (using gzip) and store them in an archive folder, keeping a limited number of archived files. 
+Use fs to manage log rotation and path to organize the files correctly.
 
 
 
